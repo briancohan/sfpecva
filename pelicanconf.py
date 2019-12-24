@@ -7,6 +7,9 @@ SITENAME = 'SFPE Central VA'
 SITEURL = ''
 
 PATH = 'content'
+THEME = 'themes/sfpecva'
+DEFAULT_PAGINATION = 12
+DELETE_OUTPUT_DIRECTORY = True
 
 TIMEZONE = 'America/New_York'
 
@@ -28,8 +31,6 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
-
-DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
