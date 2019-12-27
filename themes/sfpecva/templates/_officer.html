@@ -1,0 +1,12 @@
+<div class="card w-100 my-2" style="width: 18rem;">
+    <div class="card-body">
+        <h4>{{ article.position }}</h4>
+        <h5 class="text-danger">
+            {{ article.title }}
+            {% if article.linkedin %}
+            <a class='ml-3' href="{{ article.linkedin }}"><i class="fab fa-linkedin"></i></a>
+            {% endif %}
+        </h5>
+        {{ article.content }}
+    </div>
+</div>
