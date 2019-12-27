@@ -8,7 +8,7 @@ SITEURL = ''
 
 PATH = 'content'
 THEME = 'themes/sfpecva'
-DEFAULT_PAGINATION = 12
+DEFAULT_PAGINATION = 10
 DELETE_OUTPUT_DIRECTORY = True
 
 TIMEZONE = 'America/New_York'
