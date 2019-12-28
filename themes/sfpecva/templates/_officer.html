@@ -1,13 +1,13 @@
-<div class="card w-100 my-2" style="width: 18rem;">
-    <div class="card-body">
-        <img src="{{ SITE_URL}}/images/{{ article.image }}" alt="{{ article.title }}"/>
-        <h4>{{ article.position }}</h4>
-        <h5 class="text-danger">
+<div class="media mb-5">
+    <img class="img-fluid officer mr-3 rounded-circle" src="{{ SITE_URL}}/images/{{ article.image }}" alt="{{ article.title }}"/>
+    <div class="media-body">
+        <h4 class="text-danger">
             {{ article.title }}
             {% if article.linkedin %}
-            <a class='ml-3' href="{{ article.linkedin }}"><i class="fab fa-linkedin"></i></a>
+            <a class='ml-2' href="{{ article.linkedin }}"><i class="fab fa-linkedin"></i></a>
             {% endif %}
-        </h5>
-        {{ article.content }}
+        </h4>
+        <h5 class="mt-0">{{ article.position }}</h5>
+        {{ article.content }}    
     </div>
 </div>

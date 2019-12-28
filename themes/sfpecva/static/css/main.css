@@ -3,3 +3,7 @@
     background-size: cover;
     background-blend-mode: lighten;
 }
+
+img.officer {
+    max-width: 200px;
+}
