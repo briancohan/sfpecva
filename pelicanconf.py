@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from datetime import datetime
 
 # Site Info
 AUTHOR = 'SFPECVA'
@@ -30,4 +31,17 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/CNAME': {'path': 'CNAME'},
+}
+
+
+def future_events(articles):
+    return [
+        a for a in articles
+        if a.date > datetime.now(a.date.tzinfo)
+        and a.category == "Meetings"
+    ][::-1]
+
+
+JINJA_FILTERS = {
+    'future_events': future_events,
 }
