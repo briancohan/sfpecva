@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Archives</h1>
+
+<ul class="list-group">
+{% for article in dates | selectattr('category', '==', 'meetings') %}
+<li class="list-group-item">
+    {{ article.date.strftime('%Y-%m-%d') }}
+    <a class='ml-3' href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}
