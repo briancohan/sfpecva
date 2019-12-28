@@ -1,5 +1,9 @@
 .banner.jumbotron {
-    background: url("/theme/images/skyline.jpg") no-repeat center center;
+    background: url("sfpecva/theme/images/skyline.jpg", "/theme/images/skyline.jpg") no-repeat center center;
     background-size: cover;
     background-blend-mode: lighten;
+}
+
+img.officer {
+    max-width: 200px;
 }
