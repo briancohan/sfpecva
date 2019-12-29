@@ -11,17 +11,24 @@
 
     {% block extra_head %}{% endblock extra_head %}
 </head>
-<body class="container">
+<body>
 
-    <header>
+    <header class="container">
         {% include '_navbar.html' %}
         {% include '_banner.html' %}
     </header>
 
-    <div class="content">
+    <div class="content container">
         {% block content %}
         {% endblock %}
     </div>
+
+    <footer class='mt-5 bg-secondary'>
+        <div class="container">
+            {% include '_present.html' %}
+            {% include '_links.html' %}
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

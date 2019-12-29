@@ -33,6 +33,16 @@ EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
 }
 
+SITE_LINKS = (
+    ('Past Presenters', 'authors.html'),
+    ('Topics', 'tags.html'),
+    ('Archives', 'archives.html')
+)
+
+SFPE_LINKS = (
+    ('National SFPE', 'http://www.sfpe.org'),
+    ('SFPE Job Listings', 'https://jobs.sfpe.org')
+)
 
 def future_events(articles):
     return [
