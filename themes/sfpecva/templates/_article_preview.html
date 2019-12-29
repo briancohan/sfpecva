@@ -1,4 +1,4 @@
-<div class="card w-100 my-2" style="width: 18rem;">
+<article class="card w-100 my-2 {% if not category %}d-none{% endif %}" style="width: 18rem;" data-date="{{ article.date.strftime('%Y-%m-%d') }}">
     <div class="card-body">
         <h5 class="card-title">
             <span class="text-muted">{{ article.date.strftime('%a, %b %d, %Y -  %I:%M %p') | replace(' 0', ' ')}}</span>
@@ -10,4 +10,4 @@
         <h6 class="card-subtitle mb-2 text-primary">{{ article.special }}</h6>
         {% endif %}
     </div>
-</div>
+</article>
