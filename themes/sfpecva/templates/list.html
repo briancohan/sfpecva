@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% block content_title %}{% endblock %}
+
+    {% if category == 'officers' %}
+
+        {% for article in articles_page.object_list %}
+            {% include '_officer.html' %}
+        {% endfor %}
+    
+    {% else %}
+
+        {% for article in articles_page.object_list %}
+            {% include '_article_preview.html' %}
+        {% endfor %}
+
+    {% endif %}
+
+    {% if articles_page.has_other_pages() %}
+        {% include 'pagination.html' %}
+    {% endif %}
+    
+{% endblock %}
