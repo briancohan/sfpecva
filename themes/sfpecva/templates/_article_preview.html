@@ -4,10 +4,10 @@
             <span class="text-muted">{{ article.date.strftime('%a, %b %d, %Y -  %I:%M %p') | replace(' 0', ' ')}}</span>
         </h5>
         <h5>
-            <a href="{{ SITEURL }}/{{ article.url }}" class="text-danger">{{ article.title }}</a>
+            <a href="{{ SITEURL }}/{{ article.url }}" class="text-primary">{{ article.title }}</a>
         </h5>
         {% if article.special %}
-        <h6 class="card-subtitle mb-2 text-primary">{{ article.special }}</h6>
+        <h6 class="card-subtitle mb-2 text-danger">{{ article.special }}</h6>
         {% endif %}
     </div>
 </article>

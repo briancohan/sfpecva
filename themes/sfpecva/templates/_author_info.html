@@ -3,7 +3,7 @@
         {% if author.page %}
         
         <h3 class="card-title">
-            <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author.page.name }}</a>
+            <a class="{% if not category %}text-danger{% endif %}" href="{{ SITEURL }}/{{ author.url }}">{{ author.page.name }}</a>
             
             {% if author.page.linkedin %}
             <a class='ml-2' href="{{ author.page.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>

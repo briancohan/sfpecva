@@ -15,7 +15,7 @@
 {% block content %}
 <section id="content" class="body">
   <header>
-    <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+    <h1><a class='text-danger' href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
     
     <time class="published" datetime="{{ article.date.isoformat() }}">
       {{ article.date.strftime('%a, %b %d, %Y -  %I:%M %p') | replace(' 0', ' ') }}
@@ -37,7 +37,7 @@
 
   {% if article.authors %}
   <address>
-    <h3>{% if article.authors | length == 1 %}Presenter{% else %}Presenters{% endif %}: </h3>
+    <h3 class='text-danger'>{% if article.authors | length == 1 %}Presenter{% else %}Presenters{% endif %}: </h3>
     {% for author in article.authors %}
     {% include '_author_info.html' %}
     {% endfor %}
