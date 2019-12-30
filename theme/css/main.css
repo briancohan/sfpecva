@@ -1,7 +1,42 @@
-.banner.jumbotron {
-    background: url("/sfpecva/theme/images/skyline.jpg") no-repeat center center;
-    background-size: cover;
-    background-blend-mode: lighten;
+.banner {
+	position: relative;
+	height: 250px;
+	display: block;
+	overflow: hidden;
+}
+
+#banner-img {
+	position: absolute;
+	right: 0;
+	opacity: .6;
+}
+
+#banner-img.d-none.d-xl-block {
+    top: -35%;
+}
+#banner-img.d-none.d-lg-block.d-xl-none {
+    top: -15%;
+}
+#banner-img.d-none.d-md-block.d-lg-none {
+    top: 0%;
+}
+#banner-img.d-none.d-sm-block.d-md-none {
+    top: 0%;
+}
+
+
+#logo {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	padding: 12px;
+	max-height: 170px;
+}
+
+#logo.d-block.d-md-none {
+	position: static;
+	margin: auto;
+	max-height: 250px;
 }
 
 img.officer {
