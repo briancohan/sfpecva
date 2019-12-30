@@ -6,9 +6,11 @@
     <h1>Presenters on {{ SITENAME }}</h1>
     <ul class="list-group">
     {% for author, articles in authors|sort %}
+        {% if author != '' %}
         <li class="list-group-item list-group-item-action">
             <a class="stretched-link" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> - {{ articles|count }}
         </li>
+        {% endif %}
     {% endfor %}
     </ul>
 {% endblock %}

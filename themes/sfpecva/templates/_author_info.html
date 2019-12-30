@@ -1,0 +1,39 @@
+<div class="card mb-2">
+    <div class="card-body">
+        {% if author.page %}
+        
+        <h3 class="card-title">
+            <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author.page.name }}</a>
+            
+            {% if author.page.linkedin %}
+            <a class='ml-2' href="{{ author.page.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+            {% endif %}
+        </h3>
+        
+        {% if author.page.title %}
+        <h4 class="card-subtitle mb-2 text-muted">{{ author.page.title }}</h4>
+        {% endif %}
+
+        {% if author.page.organization %}
+        <h4 class="card-subtitle mb-2 text-muted">
+            {% if author.page.url %}
+            <a href="{{ author.page.url }}" target="_blank">{{ author.page.organization }}</a>
+            {% else %}
+            {{ author.page.organization }}
+            {% endif %}
+            
+            {% if author.page.department %}
+            {{ author.page.department }}
+            {% endif %}
+        </h4>
+        {% endif %}
+
+        <p class="card-text">{{ author.page.content }}</p>
+        
+        {% else %}
+        
+        <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+        
+        {% endif %}
+    </div>
+</div>

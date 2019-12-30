@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 from datetime import datetime
 
 # Site Info
-AUTHOR = 'SFPECVA'
+AUTHOR = ''
 SITENAME = 'SFPE Central VA'
 SITEURL = ''
 TIMEZONE = 'America/New_York'

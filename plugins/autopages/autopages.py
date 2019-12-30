@@ -57,8 +57,12 @@ def create_autopages(article_generator):
     category_pages = make_pages(readers, context, categories_path)
     tag_pages = make_pages(readers, context, tags_path)
 
-    for author, _ in article_generator.authors:
+    for author, articles in article_generator.authors:
         author.page = author_pages.get(author.slug, "")
+        for article in articles:
+            for auth in article.authors:
+                if auth.slug == author.slug:
+                    auth.page = author.page
     for category, _ in article_generator.categories:
         category.page = category_pages.get(category.slug, "")
     for tag in article_generator.tags:

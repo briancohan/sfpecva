@@ -20,16 +20,7 @@
     <time class="published" datetime="{{ article.date.isoformat() }}">
       {{ article.date.strftime('%a, %b %d, %Y -  %I:%M %p') | replace(' 0', ' ') }}
     </time>
-    
-    {% if article.authors %}
-    <address>
-      Presenter: 
-      {% for author in article.authors %}
-      <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-      {% endfor %}
-    </address>
-    {% endif %}
-    
+       
     {% if article.tags %}
     <div class="tags">
       Topics:
@@ -43,5 +34,14 @@
   <div class="entry-content my-3">
     {{ article.content }}
   </div>
+
+  {% if article.authors %}
+  <address>
+    <h3>{% if article.authors | length == 1 %}Presenter{% else %}Presenters{% endif %}: </h3>
+    {% for author in article.authors %}
+    {% include '_author_info.html' %}
+    {% endfor %}
+  </address>
+  {% endif %}
 </section>
 {% endblock %}
