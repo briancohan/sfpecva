@@ -23,6 +23,9 @@ THEME = 'themes/sfpecva'
 DEFAULT_PAGINATION = 10
 DELETE_OUTPUT_DIRECTORY = True
 
+PLUGIN_PATHS = ['plugins/']
+PLUGINS = ['autopages']
+
 STATIC_PATHS = [
     'images',
     'extra',
@@ -43,6 +46,7 @@ SFPE_LINKS = (
     ('National SFPE', 'http://www.sfpe.org'),
     ('SFPE Job Listings', 'https://jobs.sfpe.org')
 )
+
 
 def future_events(articles):
     return [

@@ -1,7 +1,49 @@
 {% extends "list.html" %}
 
-{% block title %}Presentations by {{ author }}{% endblock %}
+{% block title %}
+    Presentations by 
+    {% if author.page.name %}
+        {{ author.page.name }}
+    {% else %}
+        {{ author.name }}
+    {% endif %}
+{% endblock %}
 
 {% block content_title %}
-<h2>Presentations by {{ author }}</h2>
+<h2>
+    Presentations by     
+    <span class='text-primary'>
+    {% if author.page.name %}
+        {{ author.page.name }}
+    {% else %}
+        {{ author.name }}
+    {% endif %}
+    </span>
+
+    {% if author.page.linkedin %}
+    <a class='ml-2' href="{{ author.page.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+    {% endif %}
+</h2>
+
+{% if author.page.organization %}
+<h3>
+    {% if author.page.url %}
+    <a class='text-danger' href="{{ author.page.url }}" target="_blank">{{ author.page.organization }}</a>
+    {% else %}
+    <span class='text-danger'>{{ author.page.organization }}</span>
+    {% endif %}
+    {% if author.page.department %}
+    <span class='text-muted'> {{ author.page.department }}</span>
+    {% endif %}
+</h3>
+{% endif %}
+
+{% if author.page.title %}
+<h4>{{ author.page.title }}</h4>
+{% endif %}
+
+{% if author.page.content %}
+{{ author.page.content }}
+{% endif %}
+
 {% endblock %}
