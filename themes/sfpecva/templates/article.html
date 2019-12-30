@@ -3,55 +3,45 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block extra_head %}
-  {{ super() }}
-  {% if article.description %}
-    <meta name="description" content="{{article.description}}" />
-  {% endif %}
-  {% for tag in article.tags %}
-    <meta name="tags" content="{{tag}}" />
-  {% endfor %}
+{{ super() }}
+{% if article.description %}
+<meta name="description" content="{{article.description}}" />
+{% endif %}
+{% for tag in article.tags %}
+<meta name="tags" content="{{tag}}" />
+{% endfor %}
 {% endblock %}
 
 {% block content %}
 <section id="content" class="body">
   <header>
-    <h2 class="entry-title">
-      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-
-  </header>
-  <footer class="post-info">
+    <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+    
     <time class="published" datetime="{{ article.date.isoformat() }}">
-      {{ article.locale_date }}
+      {{ article.date.strftime('%a, %b %d, %Y -  %I:%M %p') | replace(' 0', ' ') }}
     </time>
-    {% if article.modified %}
-    <time class="modified" datetime="{{ article.modified.isoformat() }}">
-      {{ article.locale_modified }}
-    </time>
-    {% endif %}
+    
     {% if article.authors %}
-    <address class="vcard author">
-      By {% for author in article.authors %}
-          <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-        {% endfor %}
+    <address>
+      Presenter: 
+      {% for author in article.authors %}
+      <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+      {% endfor %}
     </address>
     {% endif %}
-    {% if article.category %}
-    <div class="category">
-        Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-    </div>
-    {% endif %}
+    
     {% if article.tags %}
     <div class="tags">
-        Tags:
-        {% for tag in article.tags %}
-            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-        {% endfor %}
+      Topics:
+      {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}"><span class="badge badge-secondary">{{ tag }}</span></a>
+      {% endfor %}
     </div>
     {% endif %}
-  </footer><!-- /.post-info -->
-  <div class="entry-content">
+    
+  </header>
+  <div class="entry-content my-3">
     {{ article.content }}
-  </div><!-- /.entry-content -->
+  </div>
 </section>
 {% endblock %}
