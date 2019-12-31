@@ -16,10 +16,15 @@
 <section id="content" class="body">
   <header>
     <h1><a class='text-danger' href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+    {% if article.subtitle %}<h2 class='text-muted'>{{ article.subtitle }}</h2>{% endif %}
+    {% if article.special %}<h3 class='text-primary'>{{ article.special }}</h3>{% endif %}
     
     <time class="published" datetime="{{ article.date.isoformat() }}">
       {{ article.date.strftime('%a, %b %d, %Y -  %I:%M %p') | replace(' 0', ' ') }}
     </time>
+    {% if article.lunch %}(Lunch: {{ article.lunch | str2time }}){% endif %}
+    {% if article.dinner %}(Dinner: {{ article.dinner | str2time }}){% endif %}
+
        
     {% if article.tags %}
     <div class="tags">

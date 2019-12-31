@@ -56,6 +56,11 @@ def future_events(articles):
     ][::-1]
 
 
+def str2time(timestr):
+    return datetime.strptime(timestr, "%H:%M").strftime(' %I:%M %p').replace(' 0', ' ')
+
+
 JINJA_FILTERS = {
     'future_events': future_events,
+    'str2time': str2time,
 }
