@@ -1,0 +1,9 @@
+{% if article.location %}
+<address>
+<a target='_blank' href="{{ article.site }}">{{ article.location }}</a>
+<br/>{{ article.address1 }}
+{% if article.address2 %}<br/>{{ article.address2 }}{% endif %}
+<br/>{{ article.city }}, {{ article.state }} (<a target='_blank' href='{{ article.map }}'>Map</a>)
+<br/>{{ article.phone }}
+</address>
+{% endif %}

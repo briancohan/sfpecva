@@ -25,6 +25,8 @@
     {% if article.lunch %}(Lunch: {{ article.lunch | str2time }}){% endif %}
     {% if article.dinner %}(Dinner: {{ article.dinner | str2time }}){% endif %}
 
+    {% include '_location.html' %}
+
     <div id="paypal-meeting" class="text-success d-none" data-date="{{ article.date.strftime('%Y-%m-%d') }}">
       Pay ahead of time: <a href="{{ PAYPAL_MEETING }}"><i title="Paypal" class="fab fa-cc-paypal"></i></a>
     </div>
