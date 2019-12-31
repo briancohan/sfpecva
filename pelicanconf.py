@@ -9,6 +9,8 @@ SITENAME = 'SFPE Central VA'
 SITEURL = ''
 TIMEZONE = 'America/New_York'
 DEFAULT_LANG = 'en'
+PAYPAL_MEETING = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RL65DGSCD2MHQ'
+PAYPAL_MEMBER = 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V6CYLBB5B7FB2'
 
 # Disable Feeds
 FEED_ALL_ATOM = None
