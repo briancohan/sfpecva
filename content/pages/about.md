@@ -10,7 +10,7 @@ We welcome everyone to our meetings! Membership is not necessary to attend the m
 
 We are a non-profit organization.
 
-# Awards
+<h1 class='text-danger'>Awards</h1>
 
 * 2015 - Bronze Award for Chapter Excellence
 * 2016 - Gold Award for Chapter Excellence
