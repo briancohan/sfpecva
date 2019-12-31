@@ -37,7 +37,7 @@ EXTRA_PATH_METADATA = {
 }
 
 SITE_LINKS = (
-    ('Past Presenters', 'authors.html'),
+    ('Presenters', 'authors.html'),
     ('Topics', 'tags.html'),
     ('Archives', 'archives.html')
 )
