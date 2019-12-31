@@ -1,12 +1,12 @@
 {% extends "list.html" %}
 
 {% block title %}
-    Presentations by 
     {% if author.page.name %}
         {{ author.page.name }}
     {% else %}
         {{ author.name }}
     {% endif %}
+    - {{ SITENAME }}
 {% endblock %}
 
 {% block content_title %}
