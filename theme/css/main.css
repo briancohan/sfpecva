@@ -42,3 +42,7 @@
 img.officer {
     max-width: 200px;
 }
+
+img.officer.d-block {
+    max-width: 100px;
+}
