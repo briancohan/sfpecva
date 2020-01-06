@@ -2,13 +2,13 @@
 
 {% block content %}
     {% block content_title %}{% endblock %}
-
+    <div id="{% block content_id %}{% endblock %}">
     {% if category == 'officers' %}
 
         {% for article in articles_page.object_list %}
             {% include '_officer.html' %}
         {% endfor %}
-    
+
     {% else %}
 
         {% for article in articles_page.object_list %}
@@ -16,9 +16,10 @@
         {% endfor %}
 
     {% endif %}
+    </div>
 
     {% if articles_page.has_other_pages() %}
         {% include '_pagination.html' %}
     {% endif %}
-    
+
 {% endblock %}
