@@ -1,6 +1,6 @@
 Title: Bryan Powell
-Date: 2020-08-01
-Position: Member at Large
+Date: 2020-08-02
+Position: Member at Large, Past President
 LinkedIn: https://www.linkedin.com/in/bryan-powell-51659811/
 Image: powell.jpg
 

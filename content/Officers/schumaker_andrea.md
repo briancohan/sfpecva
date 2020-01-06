@@ -1,5 +1,5 @@
 Title: Andrea Schumaker
-Date: 2020-08-03
+Date: 2020-08-04
 Position: Secretary
 LinkedIn: https://www.linkedin.com/in/andrea-schumaker-8314931a/
 Image: schumaker.jpg

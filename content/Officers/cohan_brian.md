@@ -1,5 +1,5 @@
 Title: Brian Cohan
-Date: 2020-08-02
+Date: 2020-08-01
 Position: Member at Large
 LinkedIn: https://www.linkedin.com/in/briandcohan/
 Image: cohan.jpg
