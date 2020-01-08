@@ -24,6 +24,8 @@ PATH = 'content'
 THEME = 'themes/sfpecva'
 DEFAULT_PAGINATION = 10
 DELETE_OUTPUT_DIRECTORY = True
+AUTHOR_URL = AUTHOR_SAVE_AS = 'presenter/{slug}.html'
+AUTHORS_SAVE_AS = 'presenters.html'
 
 PLUGIN_PATHS = ['plugins/']
 PLUGINS = ['autopages']
@@ -39,7 +41,7 @@ EXTRA_PATH_METADATA = {
 }
 
 SITE_LINKS = (
-    ('Presenters', 'authors.html'),
+    ('Presenters', AUTHORS_SAVE_AS),
     ('Topics', 'tags.html'),
     ('Archives', 'archives.html')
 )
