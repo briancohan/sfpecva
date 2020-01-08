@@ -26,6 +26,8 @@ DEFAULT_PAGINATION = 10
 DELETE_OUTPUT_DIRECTORY = True
 AUTHOR_URL = AUTHOR_SAVE_AS = 'presenter/{slug}.html'
 AUTHORS_SAVE_AS = 'presenters.html'
+TAG_URL = TAG_SAVE_AS = 'topic/{slug}.html'
+TAGS_SAVE_AS = 'topics.html'
 
 PLUGIN_PATHS = ['plugins/']
 PLUGINS = ['autopages']
@@ -42,7 +44,7 @@ EXTRA_PATH_METADATA = {
 
 SITE_LINKS = (
     ('Presenters', AUTHORS_SAVE_AS),
-    ('Topics', 'tags.html'),
+    ('Topics', TAGS_SAVE_AS),
     ('Archives', 'archives.html')
 )
 
