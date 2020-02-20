@@ -7,7 +7,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://briancohan.github.io/sfpecva'
+SITEURL = 'https://sfpecentralva.org'
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
