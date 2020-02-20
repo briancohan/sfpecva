@@ -12,6 +12,8 @@ We are a non-profit organization.
 
 <h1 class='text-danger'>Awards</h1>
 
-* 2015 - Bronze Award for Chapter Excellence
-* 2016 - Gold Award for Chapter Excellence
+* 2019 - Silver Award for Chapter Excellence
+* 2018 - Silver Award for Chapter Excellence
 * 2017 - Bronze Award for Chapter Excellence
+* 2016 - Gold Award for Chapter Excellence
+* 2015 - Bronze Award for Chapter Excellence
