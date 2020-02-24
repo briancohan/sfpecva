@@ -1,4 +1,4 @@
-<article class="card w-100 my-2 {% if output_file == 'index.html' %}d-none{% endif %}" style="width: 18rem;" data-date="{{ article.date.strftime('%Y-%m-%d') }}">
+<article class="card w-100 my-2 {% if output_file == 'index.html' %}d-none{% endif %}" style="width: 18rem;" data-date="{{ article.date.strftime('%Y-%m-%d %H:%M') }}">
     <div class="card-body">
         <h5 class="card-title">
             <span class="text-muted">{{ article.date.strftime('%a, %b %d, %Y -  %I:%M %p') | replace(' 0', ' ')}}</span>

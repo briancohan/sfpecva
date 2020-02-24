@@ -1,6 +1,6 @@
 $('#next_event article').each(function() {
     var date = Date.parse($(this).data('date'));
-    if (date > Date.now()) {
+    if (date + (6 * 3600 * 1000) > Date.now()) {
         $(this).removeClass('d-none');
         $(this).addClass('border-info');
         return false;
@@ -9,7 +9,7 @@ $('#next_event article').each(function() {
 
 $('#paypal-meeting').each(function() {
     var date = Date.parse($(this).data('date'));
-    if (date > Date.now()) {
+    if (date + (6 * 3600 * 1000) > Date.now()) {
         $(this).removeClass('d-none');
         return false;
     }
@@ -17,7 +17,7 @@ $('#paypal-meeting').each(function() {
 
 $('#Meetings article').each(function() {
     var date = Date.parse($(this).data('date'));
-    if (date > Date.now()) {
+    if (date + (6 * 3600 * 1000) > Date.now()) {
         $(this).addClass('border-info');
     }
 });
