@@ -31,23 +31,36 @@
       <ChapterAward v-for="award in awards" :key="award.Key" :award="award" />
     </ul>
   </div>
+  <div class="officers">
+    <h2>Officers</h2>
+    <ChapterOfficer
+      v-for="officer in officers"
+      :key="officer.Key"
+      :officer="officer"
+    />
+  </div>
 </template>
 
 <script>
 import ChapterAward from "@/components/ChapterAward.vue";
+import ChapterOfficer from "@/components/ChapterOfficer.vue";
 import AirtableAPI from "@/services/AirtableAPI.js";
 
 export default {
   name: "About",
-  components: { ChapterAward },
+  components: { ChapterAward, ChapterOfficer },
   data() {
     return {
       awards: [],
+      officers: [],
     };
   },
   created() {
     AirtableAPI.getAllAwards().then((response) => {
       this.awards = response.map((award) => award.fields);
+    });
+    AirtableAPI.getAllOfficers().then((response) => {
+      this.officers = response.map((officer) => officer.fields);
     });
   },
 };

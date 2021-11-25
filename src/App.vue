@@ -1,8 +1,8 @@
 <template>
   <div id="nav">
     <router-link :to="{ name: 'Home' }">Home</router-link>
-    <router-link :to="{ name: 'About' }">About</router-link>
     <router-link :to="{ name: 'Meetings' }">Meetings</router-link>
+    <router-link :to="{ name: 'About' }">About</router-link>
   </div>
   <router-view />
 </template>
@@ -19,21 +19,18 @@
 
 #nav {
   padding: 30px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 #nav a {
   font-weight: bold;
   color: #2c3e50;
-  margin: 0 1rem;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
-
-#nav a:not(:last-child):after {
-  content: "";
-
 }
 </style>
