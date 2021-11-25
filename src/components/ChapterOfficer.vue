@@ -5,7 +5,9 @@
       <h3>{{ name }}</h3>
       <h4>{{ positions }}</h4>
       <p>{{ bio }}</p>
-      <a :href="'//' + linkedin" target="_blank"> LinkedIn </a>
+      <a v-if="hasLinkedin" :href="'//' + linkedin" target="_blank">
+        LinkedIn
+      </a>
     </div>
   </div>
 </template>
@@ -18,7 +20,10 @@ export default {
   },
   computed: {
     linkedin() {
-      return this.officer.LinkedIn[0];
+      return this.officer?.LinkedIn ? this.officer?.LinkedIn[0] : "";
+    },
+    hasLinkedin() {
+      return this.linkedin !== "";
     },
     name() {
       return this.officer.Name[0];
@@ -27,7 +32,7 @@ export default {
       return this.officer.Position.join(", ");
     },
     bio() {
-      return this.officer.Bio[0];
+      return this.officer?.Bio ? this.officer.Bio[0] : "";
     },
     img() {
       return this.officer.Image[0].url;
