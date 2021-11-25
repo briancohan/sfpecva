@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link :to="{ name: 'Home' }">Home</router-link>
+    <router-link :to="{ name: 'About' }">About</router-link>
+    <router-link :to="{ name: 'Meetings' }">Meetings</router-link>
   </div>
   <router-view />
 </template>
@@ -24,9 +25,15 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  margin: 0 1rem;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+#nav a:not(:last-child):after {
+  content: "";
+
 }
 </style>
