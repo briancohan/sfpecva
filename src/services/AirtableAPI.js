@@ -6,14 +6,15 @@ Airtable.configure({
 });
 
 const base = Airtable.base("appQVrGH82zKr13qR");
-const awards = base("Awards");
-const officers = base("Officers");
 
 export default {
   getAllAwards() {
-    return awards.select({ view: "All" }).all();
+    return base("Awards").select({ view: "All" }).all();
   },
   getAllOfficers() {
-    return officers.select({ maxRecords: 100, view: "Current" }).all();
+    return base("Officers").select({ maxRecords: 100, view: "Current" }).all();
+  },
+  getAllTopics() {
+    return base("Topics").select({ view: "All" }).all();
   },
 };
